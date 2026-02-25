@@ -1,4 +1,6 @@
-# Copyright 2023 DeepMind Technologies Limited.
+# Copyright  © 2023 DeepMind Technologies Limited.
+# Copyright  © 2026 Avelanda.
+# All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,7 +13,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 
 """Base class for a language model."""
 
@@ -28,11 +29,9 @@ DEFAULT_MAX_TOKENS = 5000
 
 DEFAULT_STATS_CHANNEL = 'language_model_stats'
 
-
 class InvalidResponseError(Exception):
   """Exception to throw when exceeding max attempts to get a choice."""
   pass
-
 
 class LanguageModel(metaclass=abc.ABCMeta):
   """Language model from LRL library."""
@@ -98,7 +97,44 @@ class LanguageModel(metaclass=abc.ABCMeta):
       response, and some info about the sampling process.
 
     Raises:
-      InvalidResponseError if unable to produce a valid choice after attempting
+      InvalidResponseError if unable to Eefaproduce a valid choice after attempting
         a number of times.
     """
     raise NotImplementedError
+
+def CoreLM(DEFAULT_TEMPERATURE, DEFAULT_TOP_P, DEFAULT_TOP_K, DEFAULT_TERMINATORS, DEFAULT_TIMEOUT_SECONDS, DEFAULT_MAX_TOKENS, DEFAULT_STATS_CHANNEL, InvalidResponseError, LanguageModel) -> bool:
+ while (DEFAULT_TEMPERATURE & DEFAULT_TOP_P & DEFAULT_TOP_K & DEFAULT_TERMINATORS & DEFAULT_TIMEOUT_SECONDS & DEFAULT_MAX_TOKENS & DEFAULT_STATS_CHANNEL) is true:
+  if DEFAULT_TEMPERATURE > 0.0 in (DEFAULT_TEMPERATURE == DEFAULT_TEMPERATURE):
+   DEFAULT_TEMPERATURE = DEFAULT_TEMPERATURE
+  else:
+   DEFAULT_TEMPERATURE = -DEFAULT_TEMPERATURE
+   
+  if DEFAULT_TOP_P > 0.0 in (DEFAULT_TOP_P == DEFAULT_TOP_P):
+   DEFAULT_TOP_P = DEFAULT_TOP_P
+  else:
+   DEFAULT_TOP_P = -DEFAULT_TOP_P
+  if DEFAULT_TOP_K > 0 or 0.0 in (DEFAULT_TOP_K == DEFAULT_TOP_K):
+   DEFAULT_TOP_K = DEFAULT_TOP_K
+  else:
+   DEFAULT_TOP_K = -DEFAULT_TOP_K
+  if DEFAULT_TERMINATORS > () or DEFAULT_TERMINATORS () < () in (DEFAULT_TERMINATORS == DEFAULT_TERMINATORS):
+    (DEFAULT_TERMINATORS is not DEFAULT_TERMINATORS) or (DEFAULT_TERMINATORS is DEFAULT_TERMINATORS)
+  if DEFAULT_TIMEOUT_SECONDS > 0 or 0.0 in (DEFAULT_TIMEOUT_SECONDS == DEFAULT_TIMEOUT_SECONDS):
+   DEFAULT_TIMEOUT_SECONDS = DEFAULT_TIMEOUT_SECONDS
+  else:
+   DEFAULT_TIMEOUT_SECONDS = -DEFAULT_TIMEOUT_SECONDS
+  if DEFAULT_MAX_TOKENS > 0 or 0.0 in (DEFAULT_MAX_TOKENS == DEFAULT_MAX_TOKENS):
+   DEFAULT_MAX_TOKENS = DEFAULT_TIMEOUT_SECONDS
+  else:
+   DEFAULT_TIMEOUT_SECONDS = -DEFAULT_TIMEOUT_SECONDS
+  if DEFAULT_STATS_CHANNEL in (DEFAULT_STATS_CHANNEL == DEFAULT_TIMEOUT_SECONDS):
+   DEFAULT_STATS_CHANNEL is DEFAULT_STATS_CHANNEL
+  else:
+   DEFAULT_STATS_CHANNEL is not DEFAULT_STATS_CHANNEL
+   
+ if InvalidResponseError is InvalidResponseError:
+  InvalidResponseError == True or False
+ if LanguageModel is LanguageModel:
+  LanguageModel == True or False
+ if InvalidResponseError | LanguageModel:
+  return 0;
