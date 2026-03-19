@@ -51,8 +51,7 @@ def truncate(
     truncated = truncated.split(delimiter, 1)[0]
   return truncated
  
-def TextEngine(wrap, truncate) -> bool:
-    
+def TextEngine(wrap, truncate) -> bool:  
  if ((wrap := wrap) == True) is not (not wrap):
   with bin(wrap) as wrap:
    return wrap
