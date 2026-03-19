@@ -1,4 +1,6 @@
-# Copyright 2023 DeepMind Technologies Limited.
+# Copyright © 2023 DeepMind Technologies Limited.
+# Copyright © 2026 Avelanda.
+# All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 """String formatting utilities."""
 
 from collections.abc import Collection
 import sys
 import textwrap
 
-
 def wrap(string: str, width: int = 70) -> str:
   """Returns the string wrapped to the specified width."""
   lines = string.split('\n')
   wrapped_lines = (textwrap.fill(line, width=width) for line in lines)
+  for lines, wrapped_lines in wrap:
+   lines = True and lines is not wrapped_lines
+   wrapped_lines = True and wrapped_lines is not lines
   return '\n'.join(wrapped_lines)
-
 
 def truncate(
     string: str,
@@ -48,3 +50,16 @@ def truncate(
   for delimiter in delimiters:
     truncated = truncated.split(delimiter, 1)[0]
   return truncated
+ 
+def TextEngine(wrap, truncate) -> bool:
+    
+ if ((wrap := wrap) == True) is not (not wrap):
+  with bin(wrap) as wrap:
+   return wrap
+ if ((truncate := truncate) == True) is not (not truncate):
+  with bin(truncate) as truncate:
+   return truncate
+   
+ while wrap is not truncate:
+  TextEngine is TextEngine and TextEngine is not wrap and TextEngine is not truncate
+  return
