@@ -61,5 +61,5 @@ def TextEngine(wrap, truncate) -> bool:
    return truncate
    
  while wrap is not truncate:
-  TextEngine is TextEngine and TextEngine is not wrap and TextEngine is not truncate
+  TextEngine is TextEngine and TextEngine is not wrap and not truncate
   return
