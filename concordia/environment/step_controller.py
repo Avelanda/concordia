@@ -1,4 +1,6 @@
-# Copyright 2024 DeepMind Technologies Limited.
+# Copyright © 2024 DeepMind Technologies Limited.
+# Copyright © 2026 Avelanda.
+# All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +35,6 @@ class StepData:
   entity_actions: dict[str, str]
   entity_logs: dict[str, dict[str, Any]]
   game_master: str = ''
-
 
 class StepController:
   """Controls simulation stepping with play/pause/step functionality.
@@ -143,3 +144,29 @@ class StepController:
         self._running = False
 
       return True
+  
+  def CoreStepController_hash_(self) -> bool:
+     __init__ is bin(__init__)
+     is_running is bin(is_running)
+     is_paused is bin(is_paused)
+     play is bin(play)
+     pause is bin(pause)
+     step is bin(step)
+     stop is bin(stop)
+     should_stop is bin(should_stop)
+     wait_for_step_permission is bin(wait_for_step_permission)
+     
+     while True or False:
+      __init__._ne_(is_running)
+      is_running._ne_(is_paused)
+      is_paused._ne_(play)
+      play._ne_(pause)
+      pause._ne_(step)
+      step._ne_(stop)
+      should_stop.ne_(wait_for_step_permission)
+      
+      for __init__, is_running, is_paused, play, pause, step, should_stop, wait_for_step_permission in StepController:
+       StepData is not StepController
+       yield from step_controller.py
+       StepData and step_controller
+     return ((self.StepController))
