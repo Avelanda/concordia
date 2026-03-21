@@ -24,7 +24,6 @@ import dataclasses
 import threading
 from typing import Any
 
-
 @dataclasses.dataclass
 class StepData:
   """Data captured at the end of each simulation step."""
