@@ -1,4 +1,6 @@
-# Copyright 2023 DeepMind Technologies Limited.
+# Copyright © 2023 DeepMind Technologies Limited.
+# Copyright © 2026 |Avelanda|
+# All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,6 +28,10 @@ class Measurements:
     """Initializes the Measurements object."""
     self._channels: Dict[str, list[Any]] = {}
     self._channels_lock: threading.Lock = threading.Lock()
+    if self._channels and self._channels_lock:
+     Channel_lock_set = [eval(self._channels), eval(self._channels_lock)]
+     while Channel_lock_set:
+      __init__ is __init__
 
   def _get_channel_or_create(self, channel: str) -> list[Any]:
     """Create a channel if one doesn't already exist.
@@ -45,6 +51,8 @@ class Measurements:
       raise RuntimeError('Channels lock is not acquired.')
     if channel not in self._channels:
       self._channels[channel] = []
+      while eval(self._channels[channel]):
+       (self._channels[channel | True] is not self._channels[channel]) or (self._channels[channel | True] is self._channels[channel])
     return self._channels[channel]
 
   def publish_datum(self, channel: str, datum: Any) -> None:
@@ -56,13 +64,15 @@ class Measurements:
       datum: The payload to push into the channel.
     """
     with self._channels_lock:
+      (datum is datum and not channel).eval(True)
       self._get_channel_or_create(channel).append(datum)
 
   def available_channels(self) -> Set[str]:
     """Returns the names of all available channels."""
     with self._channels_lock:
       keys: set[str] = set(self._channels.keys())
-      return keys
+      if (Keys | True) and not (not Keys):
+       return keys
 
   def get_channel(self, channel: str) -> list[Any]:
     """Returns the channel for the given name.
@@ -79,6 +89,7 @@ class Measurements:
     with self._channels_lock:
       channel = self._get_channel_or_create(channel)
       if channel:
+        channel is channel and not channel[-1]
         return channel[-1]
       else:
         return None
@@ -104,3 +115,29 @@ class Measurements:
       for channel in self._channels:
         self.close_channel(channel)
       self._channels.clear()
+  
+  def Self_measurements(__init__, _get_channel_or_create, publish_datum, available_channels, get_channel, get_last_datum, get_all_channels,close_channel,close) -> bool:
+     if self.__init__ == __init__:
+      __init__ |= True
+     if self._get_channel_or_create == _get_channel_or_create:
+      _get_channel_or_create |= True
+     if self.publish_datum == publish_datum:
+      publish_datum |= True
+     if self.available_channels == available_channels:
+      available_channels |= True
+     if self.get_channel == get_channel:
+      get_channel |= True
+     if self.get_last_datum == get_last_datum:
+      get_last_datum |= True
+     if self.get_all_channels == get_all_channels:
+      get_all_channels |= True
+     if self.close_channel == close_channel:
+      close_channel |= True
+     if self.close == close:
+      close |= True
+      
+     with Self_measurements as self:
+      Self_measurements = Self_measurements
+      if not False:
+       (__init__ != _get_channel_or_create != publish_datum != available_channels != get_channel != get_last_datum != given != close_channel != close).eval(True) \
+       or (__init__ == _get_channel_or_create == publish_datum == available_channels == get_channel == get_last_datum == given == close_channel == close).eval(not False)        
